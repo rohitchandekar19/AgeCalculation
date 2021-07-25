@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.UserDetailsFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        style="@style/text_bold_ww"
+        android:layout_marginTop="20dp"
+        android:text="@string/user_s_age_details"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/first_name_container"
+        style="@style/container_style"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_bold_ww"
+            android:ems="5"
+            android:text="@string/first_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/first_name"
+            style="@style/text_normal_ww" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/last_name_container"
+        style="@style/container_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_name_container">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_bold_ww"
+            android:ems="5"
+            android:text="@string/last_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/last_name"
+            style="@style/text_normal_ww" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/age_container"
+        style="@style/container_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_name_container">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/first_name_label"
+            style="@style/text_bold_ww"
+            android:ems="5"
+            android:text="@string/age" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/age"
+            style="@style/text_normal_ww" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/age_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
